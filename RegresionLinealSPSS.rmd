@@ -1,0 +1,38 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(rio)
+baseSOSS="trabajadores.sav"
+trabajadores=import(baseSOSS)
+```
+
+```{r}
+names(trabajadores)
+```
+
+```{r}
+modelo1=lm(salario_actual~salario_inicial,data=trabajadores)
+summary(modelo1)
+```
+```{r}
+hist(trabajadores$salario_actual)
+```
+
+```{r}
+cor.test(trabajadores$salario_actual, trabajadores$salario_inicial)
+```
+
+```{r}
+modelo1$coefficients
+```
+
+```{r}
+plot(trabajadores$salario_actual ~ trabajadores$salario_inicial)
+abline(modelo1, col="red")
+
+```
+

@@ -1,0 +1,36 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readxl)
+pagos <- read_excel("trabajadores.xlsx")
+names(pagos)
+```
+```{r}
+View(pagos)
+```
+```{r}
+class(pagos)
+```
+```{r}
+modelo3=lm(salario_actual~salario_inicial,data=pagos)
+summary(modelo3)
+```
+
+```{r}
+hist(pagos$salario_actual)
+```
+```{r}
+cor.test(pagos$salario_actual, pagos$salario_inicial)
+```
+```{r}
+modelo3$coefficients
+```
+
+```{r}
+plot(pagos$salario_actual ~ pagos$salario_inicial)
+abline(modelo3, col="black")
+```
+
