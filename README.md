@@ -1,5 +1,5 @@
 # estadistica
-Base de datos para procesar en R y SPSS
+Diferentes Bases de datos para procesar en R y SPSS
 
 Dejo unos ejemplos como R y Rstudio, nos permiten abrir diferentes base de datos, ya sea de SPSS, Excel o CSV, es realmente muy sencillo.
 
